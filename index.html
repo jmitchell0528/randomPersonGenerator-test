@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="peopleApp">
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <title>People</title>
+  </head>
+  <body ng-controller="controller">
+    <div class="peopleContain">
+
+      <h1>Random People Generator</h1>
+      <div ng-repeat="person in persons">
+        <img ng-src="{{ person.picture.large }}">
+        <br>
+        {{ person.name.first }}
+        {{ person.name.last }}
+        <br>
+        {{ person.gender }}
+        <br>
+        {{ person.email }}
+        <br>
+        {{ person.cell }}
+        <br>
+      </div>
+      
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/services.js"></script>
+  </body>
+</html>
